@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased bg-cream-100;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-burgundy hover:bg-burgundy-dark text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-lg active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-burgundy text-burgundy hover:bg-burgundy hover:text-white px-8 py-3 rounded-full font-medium transition-all duration-300;
+  }
+
+  .btn-outline {
+    @apply border border-gray-300 hover:border-burgundy hover:text-burgundy px-6 py-2 rounded-full font-medium transition-all duration-300;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-burgundy/30 focus:border-burgundy outline-none transition-all bg-white;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+}
